@@ -17,7 +17,7 @@
     --light-brown-banner: #766458;
     --light-gray-raiting-bg: #F2F2F2;
     --gray-raiting-text: #666666;
-
+    
     --bg-footer: rgba(255, 255, 255, 0.9);
 
 
@@ -30,31 +30,53 @@ body {
     font-family: "PT Sans", Arial, sans-serif;
     background-color: var(--bg-white);
     text-transform: uppercase;
+    background-color: var(--bg-light-gray);
     background-image: url();
     background-position: top center;
     background-repeat: no-repeat;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+    }
 .page a {
     text-decoration: none;
 }
-img {
-max-width: 100%;
-height: auto;
+.page {
+    height: 100%;
 }
-
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
 /* Logo */
-
+.main-header-logo {
+    justify-self: center;
+}
 /*Main navigation */
-
+.main-navigation-wrapper {
+   display: grid;
+   width: 1200px;
+   margin: 0 auto;
+}
 .main-nav {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
     font-size: 14px;
     line-height: 26px;
     color: var(--basic-black);
+    background-color: var(--bg-white);
     font-weight: bold;
 }
 .site-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .site-nav a {
     color: var(--basic-black);
@@ -70,7 +92,16 @@ height: auto;
     color: var(--brown-bg-header-form);
 }
 /* */
-.main-intro {
+.container {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+}
+.intro {
+    display: grid;
+    background-color: var(--bg-white);
+}
+.text-intro {
     text-align: center;
     font-size: 21px;
     line-height: 26px; 
@@ -85,9 +116,25 @@ height: auto;
     text-align: center;
 }
 /* Features */
-
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 256px;
+}
+.feature-grid-pic-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 256px;
+}
+.feature-grid-pic-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 256px;
+}
 .features-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .feature-icons {
     list-style: none;
@@ -114,9 +161,6 @@ height: auto;
     color: var(--bg-white);
     font-weight: normal;
 }
-.feature-item {
-    background-color: var(--bg-light-gray);
-}
 .item-name {
     font-size: 21px;
     line-height: 21px;
@@ -136,6 +180,7 @@ height: auto;
     color: var(--dark-gray-text);
     font-weight: normal;
 }
+/* Reservation and Search Form */
 .reservation-header {
     font-size: 30px;
     line-height: 24px;
@@ -179,7 +224,7 @@ height: auto;
     background-color: var(--blue-form-button-clicked);
     opacity: 0.3;
 }
-/* Hotel list */
+/* Hotels list */
 .result {
     font-size: 21px;
     line-height: 26px;
@@ -264,7 +309,12 @@ height: auto;
 }
 /* Main footer */
 .main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1200px;
     background-color: var(--bg-footer);
+    margin: 0 auto;
+
 }
 /* Contacts */
 .footer-contacts {
@@ -292,11 +342,10 @@ height: auto;
 }
 .social-button: hover,
 .social-button: focus {
-
 }
 /* Copyright */
 
 /* Additional */
 .visually-hidden{
-    visibility:hidden;
+    display: none;
 }
