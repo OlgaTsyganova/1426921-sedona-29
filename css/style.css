@@ -253,7 +253,15 @@ img {
     background-color: var(--blue-form-button-clicked);
     opacity: 0.3;
 }
+/* Catalog */
+.catalog-section {
+    background-color: var(--bg-white);
+}
+
 /* Hotels list */
+.hotel-img-grid {
+    
+}
 .result {
     font-size: 21px;
     line-height: 26px;
@@ -285,6 +293,11 @@ img {
 }
 .hotel-list {
     list-style: none;
+}
+.hotel-list-grid {
+    display: grid;
+    grid-template-columns: 236px 781px 183px;
+    border: solid red 3px;
 }
 .hotel-name a {
     color: var(--basic-black);

@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css\style.css">
   </head>
-  <body>
-    <header>
-        <nav class="main-nav">
-            <a href="index.html">
-                <img src="img\logos.svg" width="138" height="70" alt="Логотип городка Седона">
-            </a>
-            <ul class="site-nav">
-                <li><a href="blank.html">Информация</a></li>
-                <li><a href="blank.html">Фото и видео</a></li>
-                <li><a href="blank.html">Карта штата</a></li>
-                <li class="nav-active">Гостиницы</li>
-            </ul>
-        </nav>
-    </header>
+  <body class="page-body">
+    <div class="main-wrapper">
+  <header class="main-header">
+      <nav class="main-nav">
+          <a class="main-header-logo">
+              <img src="img/logos.svg" alt="Логотип городка Седона">
+          </a>
+          <ul class="site-nav">
+              <li><a href="blank.html">Информация</a></li>
+              <li><a href="blank.html">Фото и видео</a></li>
+              <li><a href="blank.html">Карта штата</a></li>
+              <li><a href="blank.html">Гостиницы</a></li>
+          </ul> 
+      </nav>
+  </header>
     <section>
         <h2 class="visually-hidden">Фильтр жилья</h2>
         <!-- Здесь будет форма фильтра-->
     </section>
-    <section>
-        <h2>Список гостиниц</h2>
+    <section class="catalog-section">
+        <h2 class="visually-hidden">Список гостиниц</h2>
         <p class="result">Найдено: 3</p>
         <p class="sorted">Сортировка</p>
         <div class="sorted-by"> 
@@ -37,29 +38,45 @@
             <a href="#">Стрелка вниз</a>
         </div>
         <ul class="hotel-list">
-            <li>
+            <li class="hotel-list-grid">
+                <div class="hotel-img-grid">
                 <img src="img\amara.jpg" width="135" height="90" alt="Amara resort & SPA">
+            </div>
+            <div>
                 <h3 class="hotel-name"><a href="hotels.html">Amara resort & SPA</a></h3>
                 <p class="price">Гостиница от 4000 р.</p>
                 <a class="more" href="#">Подробнее</a>
                 <a class="book" href="#">Забронировать</a>
+            </div>
+            <div>
                 <p class="raiting">Рейтинг:8,5</p>
+            </div>
             </li>
-            <li>
-                <img src="img\desert.jpg" width="135" height="90" alt="Desert quail inn">
+            <li class="hotel-list-grid">
+                <img class="img-of-hotel" src="img\desert.jpg" width="135" height="90" alt="Desert quail inn">
+            <div class="hotel-list-text">
                 <h3 class="hotel-name"><a href="hotels.html">Desert quail inn</a></h3>
                 <p class="price">Мотель от 3000 р.</p>
                 <a class="more" href="#">Подробнее</a>
                 <a class="book" href="#">Забронировать</a>
+            </div>
+            <div>
                 <p class="raiting">Рейтинг:8,9</p>
+            </div>
             </li>
-            <li>
+            <li class="hotel-list-grid">
+                <div>
                 <img src="img\villas.jpg" width="135" height="90" alt="Villas at poco diablo">
+            </div>
+            <div>
                 <h3 class="hotel-name"><a href="hotels.html">Villas at poco diablo</a></h3>
                 <p class="price">Апартаменты от 2000 р.</p>
                 <a class="more" href="#">Подробнее</a>
                 <a class="book" href="#">Забронировать</a>
+            </div>
+            <div>
                 <p class="raiting">Рейтинг:9,2</p>
+            </div>
             </li>
         </ul>
     </section>
@@ -87,5 +104,6 @@
             <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
     </footer>
+    </div>
  </body>
 </html>
