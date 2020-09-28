@@ -29,7 +29,6 @@ body {
     background-color: var(--bg-white);
     text-transform: uppercase;
     background-color: var(--bg-light-gray);
-    background-image: url();
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -52,6 +51,9 @@ img {
 .main-wrapper {
     width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
 }
 /* Logo */
 .main-header-logo {
@@ -113,6 +115,15 @@ img {
     background: url("../img/background.jpg") no-repeat;
     width: 1200px;
     height: 509px;
+    background-color: var(--bg-white);
+}
+.welcome-pic {
+    display: block;
+    padding-top: 76px;
+    margin: auto;
+}
+.intro {
+    background-color: var(--bg-white);
 }
 /* Features */
 .feature-grid {
@@ -256,27 +267,33 @@ img {
 /* Catalog */
 .catalog-section {
     background-color: var(--bg-white);
+    padding-left: 33px;
 }
-
+.sorted-header {
+    display: flex;
+    align-items: center;
+    margin-top: 29px;
+    margin-bottom: 37px;
+}
 /* Hotels list */
-.hotel-img-grid {
-    
-}
 .result {
     font-size: 21px;
     line-height: 26px;
     color: var(--basic-black);
     font-weight: bold;
+    margin-left: 40px;
 }
 .sorted {
     font-size: 12px;
     line-height: 18px;
     color: var(--basic-black);
     font-weight: normal;
+    margin-left: 48px;
 }
 .sorted-by {
     font-size: 12px;
     line-height: 18px;
+    margin-left: 40px;
 }
 .sorted-by a {
     color: var(--basic-black);
@@ -377,9 +394,9 @@ img {
 }
 /* Social buttons */
 .social {
+    display: flex;
     list-style: none;
     background-color: var(---blue-form-button);
-    text-align: center;
 }
 .social a {
     color: var(--basic-black);
