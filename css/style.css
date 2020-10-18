@@ -20,6 +20,7 @@
     --gray-footer-logo-focus: #BDBBBC;
     --gray-form: #A9A9A9;
     --gray-checkbox: #6A6A6A;
+    --gray-divider: #E5E5E5;
 
     
     --bg-footer: rgba(255, 255, 255, 0.6);
@@ -421,7 +422,12 @@ section.main-banner::before {
 }
 .filter fieldset {
     border: none;
-    margin: 30px 72px;
+    padding: 0;
+}
+.filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 72px;
 }
 .filter legend {
     line-height: 21px;
@@ -429,7 +435,12 @@ section.main-banner::before {
     text-transform: uppercase;
     font-weight: bold;
     color: var(--bg-white);
-  
+}
+.filter-checkbox::before {
+    content: "";
+    background-image: url("../img/checkbox-on.svg");
+    width: 27px;
+    height: 23px;
 }
 .filter ul {
     list-style: none;
@@ -443,9 +454,6 @@ section.main-banner::before {
 }
 .filter-item {
     padding: 0;
-    border: none;
-    margin-top: 30px;
-    
   }
   .filter-item legend {
       font-size: 16px;
@@ -454,13 +462,6 @@ section.main-banner::before {
       color: var(--bg-white);
       text-transform: uppercase;
   }
-label .filter-pool::before {
-    content: '';
-    background-image: url("../img/checkbox-on.svg");
-    color: var(--bg-white);
-    width: 27px;
-    height: 23px;
-}
   .range-controls {
       position: relative;
   }
@@ -500,6 +501,7 @@ label .filter-pool::before {
     border: 2px solid #FFFFFF;
     border-radius: 2px;
     background: transparent;
+    color: var(--bg-white);
   }
   .show-button {
     border: 2px solid #FFFFFF;
@@ -581,7 +583,7 @@ label .filter-pool::before {
     justify-content: space-between;
     align-items: center;
 }
-a .up:hover path {
+.up a:hover path {
     fill: var(--basic-black);
 }
 .hotel-list {
@@ -596,8 +598,26 @@ a .up:hover path {
     align-items: center;
     min-height: 133px;
     padding: 30px 70px;
+    position: relative;
 }
-
+.hotel-list-grid::before {
+    content: "";
+    width: 1200px;
+    height: 1px;
+    background-color: var(--gray-divider);
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+.hotel-list-grid::after {
+    content: "";
+    width: 1200px;
+    height: 1px;
+    background-color: var(--gray-divider);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .search-result {
     margin-bottom: 30;
 }
