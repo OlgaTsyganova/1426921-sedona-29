@@ -26,15 +26,15 @@
         <h2 class="visually-hidden">Фильтр жилья</h2>
         <form class="filter" method="get" action="#">
         <fieldset>
-            <legend>ИНФРАСТРУКТУРА:</legend>
+            <legend>инфраструктура:</legend>
             <ul>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool" id="filter-pool" checked>
-                    <label for="filter-pool">БАССЕЙН</label>
+                    <label for="filter-pool">бассейн</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
-                    <label for="filter-parking">ПАРКОВКА</label>
+                    <label for="filter-parking">парковка</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi" id="filter-wi-fi">
@@ -47,35 +47,33 @@
             <ul>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="inn" id="filter-inn" checked>
-                    <label for="filter-inn">ГОСТИНИЦА</label>
+                    <label for="filter-inn">гостиница</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel" id="filter-hotel" checked>
-                    <label for="filter-hotel">ОТЕЛЬ</label>
+                    <label for="filter-hotel">отель</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                     <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartment" id="filter-apartment" checked>
-                    <label for="filter-apartment">АПАРТАМЕНТЫ</label>
+                    <label for="filter-apartment">Апартаменты</label>
                 </li>
             </ul>
         </fieldset> 
         <fieldset class="filter-item">
-            <legend>СТОИМОСТЬ В СУТКИ (Р):</legend>
+            <legend>стоимость в сутки (р):</legend>
             <div class="range-filter">
                 <div class="price-controls">
-                    <label class="min-price">
-                         <input type="number" name="min-price" value="0">
-                      </label>
-                      <label class="max-price">
-                         <input type="number" name="max-price" value="3000">
-                      </label>
+                    <label class="min-price">от</label>
+                    <input type="number" name="min-price" value="0">
+                    <label class="max-price">до</label>
+                    <input type="number" name="max-price" value="3000">
                 </div>
                 <div class="range-controls">
                     <div class="scale">
                         <div class="bar"></div>
-                      </div>
-                      <div class="toggle toggle-min" tabindex="0"></div>
-                      <div class="toggle toggle-max" tabindex="0"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                    <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
                 <button type="button" class="show-button">Показать</button>
             </div>
@@ -97,13 +95,13 @@
                     <a class="up" href="#">
                         <span class="visually-hidden">Стрелка вверх</span>
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
                         </svg>
                     </a>
                     <a class="down" href="#">
                         <span class="visually-hidden">Стрелка вниз</span>
                         <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+                            <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
                         </svg>                        
                     </a>
                 </div>
@@ -112,23 +110,23 @@
         <ul class="hotel-list">
             <li class="hotel-list-grid">
                 <img src="img\amara.jpg" width="135" height="90" alt="Amara resort & SPA">
-            <div class="search-result">
-                <h3 class="hotel-name"><a href="hotels.html">Amara resort & SPA</a></h3>
-                <p class="price">Гостиница <span class="price-from">от 4000 р.</span></p>
-                <div class="more-book-buttons">
-                <a class="more" href="#">Подробнее</a>
-                <a class="book" href="#">Забронировать</a>
-            </div>
-            </div>
-            <div class="raiting-flex">
-                <div class="raiting-stars">
-                    <span class="star"></span>
-                    <span class="star"></span>
-                    <span class="star"></span>
-                    <span class="star"></span>
+                <div class="search-result">
+                    <h3 class="hotel-name"><a href="hotels.html">Amara resort & SPA</a></h3>
+                    <p class="price">Гостиница <span class="price-from">от 4000 р.</span></p>
+                    <div class="more-book-buttons">
+                        <a class="more" href="#">Подробнее</a>
+                        <a class="book" href="#">Забронировать</a>
+                    </div>
                 </div>
+                <div class="raiting-flex">
+                    <div class="raiting-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </div>
                 <p class="raiting">Рейтинг: 8,5</p>
-            </div>
+                </div>
             </li>
             <li class="hotel-list-grid">
                 <img class="img-of-hotel" src="img\desert.jpg" width="135" height="90" alt="Desert quail inn">
@@ -136,9 +134,9 @@
                 <h3 class="hotel-name"><a href="hotels.html">Desert quail inn</a></h3>
                 <p class="price">Мотель <span class="price-from">от 3000 р.</span></p>
                 <div class="more-book-buttons">
-                <a class="more" href="#">Подробнее</a>
-                <a class="book" href="#">Забронировать</a>
-            </div>
+                    <a class="more" href="#">Подробнее</a>
+                    <a class="book" href="#">Забронировать</a>
+                </div>
             </div>
             <div class="raiting-flex">
                 <div class="raiting-stars">
@@ -151,22 +149,22 @@
             </li>
             <li class="hotel-list-grid">
                 <img src="img\villas.jpg" width="135" height="90" alt="Villas at poco diablo">
-            <div class="search-result">
-                <h3 class="hotel-name"><a href="hotels.html">Villas at poco diablo</a></h3>
-                <p class="price">Апартаменты <span class="price-from">от 2000 р.</span></p>
-                <div class="more-book-buttons">
-                <a class="more" href="#">Подробнее</a>
-                <a class="book" href="#">Забронировать</a>
+                <div class="search-result">
+                    <h3 class="hotel-name"><a href="hotels.html">Villas at poco diablo</a></h3>
+                    <p class="price">Апартаменты <span class="price-from">от 2000 р.</span></p>
+                    <div class="more-book-buttons">
+                        <a class="more" href="#">Подробнее</a>
+                        <a class="book" href="#">Забронировать</a>
+                    </div>
                 </div>
-            </div>
-            <div class="raiting-flex">
-                <div class="raiting-stars">
-                    <span class="star"></span>
-                    <span class="star"></span>
+                <div class="raiting-flex">
+                    <div class="raiting-stars">
+                        <span class="star"></span>
+                        <span class="star"></span>
+                    </div>
+                    <p class="raiting">Рейтинг: 9,2</p>
                 </div>
-                <p class="raiting">Рейтинг: 9,2</p>
-            </div>
-        </li>
+            </li>
         </ul>
     </section>
     <footer class="main-footer">
