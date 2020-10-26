@@ -22,6 +22,7 @@
     --gray-checkbox: #6A6A6A;
     --gray-divider: #E5E5E5;
     --range-controls-gray: rgba(255, 255, 255, 0.3);
+    --gray-hover-form: #EBEBEB;
 
     
     --bg-footer: rgba(255, 255, 255, 0.6);
@@ -93,7 +94,7 @@ img {
     margin: 0;
     padding: 0 73px;
     text-align: center;
-    min-height: 55px;
+    min-height: 56px;
     align-items: center;
 }
 .nav-left {
@@ -140,6 +141,7 @@ img {
     font-weight: normal;
     text-align: center;
     padding: 20px 0;
+    margin-top: 23px;
 }
 /* Welcome banner */
 .main-banner {
@@ -165,7 +167,7 @@ section.main-banner::before {
 .intro {
     min-height: 216px;
     margin: 0;
-    padding-top: 48px;
+    padding-top: 42px;
 }
 /* Features */
 .feature-grid {
@@ -216,15 +218,15 @@ section.main-banner::before {
 /* Icons Index */
 .feature-icon-home {
     display: block;
-    padding-top: 30px;
+    padding-top: 55px;
 }
 .feature-icon-food {
     display: block;
-    padding-top: 30px;
+    padding-top: 55px;
 }
 .feature-icon-souvenirs {
     display: block;
-    padding-top: 30px;
+    padding-top: 55px;
 }
 .feature-icon-home::before {
     content: "";
@@ -233,7 +235,7 @@ section.main-banner::before {
     width: 75px;
     height: 72px;
     position: absolute;
-    top: 55px;
+    top: 59px;
     left: 162px;
 }
 .feature-icon-food::before {
@@ -243,7 +245,7 @@ section.main-banner::before {
     width: 75px;
     height: 70px;
     position: absolute;
-    top: 55px;
+    top: 59px;
     left: 562px;
 }
 
@@ -273,6 +275,7 @@ section.main-banner::before {
     background-color: var(--light-blue);
 }
 .item-name-w {
+    margin: 0;
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
@@ -283,6 +286,7 @@ section.main-banner::before {
     line-height: 21px;
     font-weight: normal;
     color: var(--bg-white);
+    margin: 0;
 }
 .item-text-w {
     font-size: 14px;
@@ -299,13 +303,15 @@ section.main-banner::before {
     line-height: 21px;
     color: var(--basic-black);
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .item-text {
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-black);
     font-weight: normal;
-   margin: 5px;
+    margin: 17px 5px 2px 5px;
+    padding-top: 10px;
 }
 .item-number {
     font-size: 14px;
@@ -319,6 +325,9 @@ section.main-banner::before {
     margin-top: 58px;
 }
 /* Reservation and Search Form */
+.search-show {
+    display: none;
+}
 .reservation-header {
     font-size: 30px;
     line-height: 24px;
@@ -326,7 +335,7 @@ section.main-banner::before {
     font-weight: bold;
     text-align: center;
     margin: 0;
-    padding-bottom: 40px;
+    padding-bottom: 35px;
 }
 .reservation-text {
     font-size: 14px;
@@ -334,6 +343,7 @@ section.main-banner::before {
     color: var(--basic-black);
     font-weight: normal;
     text-align: center;
+    margin: 0;
 }
 .hotel-search-header {
     display: block;
@@ -346,6 +356,7 @@ section.main-banner::before {
     margin: 50px 317px 0 315px;
 }
 .form-item {
+    display: flex;
     position: relative;
     font-size: 14px;
     line-height: 26px;
@@ -376,6 +387,13 @@ section.main-banner::before {
     padding: 5px 10px;
     height: 38px;
     flex-grow: 1;
+}
+.check-in-out:hover input {
+    background-color: var(--gray-hover-form);
+}
+.check-in-out:hover focus {
+    background: var(--bg-white)
+    border: 2px solid var(--gray-divider);
 }
 .calendar-button {
     height: 38px;
@@ -425,7 +443,18 @@ section.main-banner::before {
     border: none;
     background: var(--light-gray-raiting-bg);
 }
-
+.button-minus:hover path {
+    fill: var(--basic-black);
+}
+.button-minus:hover path {
+    fill: var(--blue-form-button);
+}
+.button-plus:hover path {
+    fill: var(--basic-black);
+}
+.button-plus:hover path {
+    fill: var(--blue-form-button);
+}
 .hotel-search-header:hover,
 .hotel-search-header:focus {
     background-color: var(--brown-button-focus);
@@ -481,12 +510,11 @@ section.main-banner::before {
 /* Forms and filters*/
 .filter {
     display: flex;
-    padding: 30px 72px;
+    padding: 19px 72px;
     background-image: url("../img/background-filter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 217px;
-    justify-content: space-between;
 }
 .filter fieldset {
     border: none;
@@ -506,17 +534,17 @@ section.main-banner::before {
     color: var(--bg-white);
     padding: 0;
   }
-  .filter-option {
+.filter-option {
       padding-top: 23px;
   }
-  .filter-option label {
+.filter-option label {
     position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
     padding-left: 40px;
   }
-  .filter-input-checkbox + label::before {
+.filter-input-checkbox + label::before {
     content: "";
     position: absolute;
     width: 23px;
@@ -525,7 +553,7 @@ section.main-banner::before {
     border-radius: 2px;
     left: 0px;
   }
-  .filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
     background-image: url("../img/checkbox-on.svg");
@@ -533,27 +561,33 @@ section.main-banner::before {
     height: 23px;
     left: 0px;
 }
-  .filter-input-checkbox:hover,
-  .filter-input-checkbox:focus {
+.filter-input-checkbox:hover,
+.filter-input-checkbox:focus {
   color: var(--gray-checkbox);
 }
-  .filter-item legend {
-      font-size: 16px;
-      line-height: 21px;
-      font-weight: bold;
-      color: var(--bg-white);
-      text-transform: uppercase;
+.accomodation {
+    margin-left: 110px;
+} 
+.filter-item {
+    margin-left: auto;
   }
-  .range-filter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 317px;
+.filter-item legend {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+    color: var(--bg-white);
+    text-transform: uppercase;
+}
+.range-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 317px;
+}
+.range-controls {
+    position: relative;
   }
-  .range-controls {
-      position: relative;
-  }
-  .range-controls .scale {
+.range-controls .scale {
     width: 316px;
     height: 2px;
     background: var(--range-controls-gray);
@@ -643,7 +677,7 @@ section.main-banner::before {
     width: 137px;
     height: 36px;
     background: transparent;
-    margin: 33px auto 3px auto;
+    margin: 35px 94px 3px auto;
   }
   .show-button:hover {
       background-color: var(--bg-white);
@@ -787,7 +821,7 @@ section.main-banner::before {
     color: var(--dark-gray-text);
     font-weight: normal;
     margin: 0;
-    padding: 6px 0 7px 0;
+    padding: 18px 0 7px 0;
     width: 240px;
 }
 .price-from {
@@ -836,7 +870,7 @@ section.main-banner::before {
     color: var(--bg-white);
     font-weight: bold;
     background-color: var(--blue-form-button);
-    padding: 7px 18px;
+    padding: 4px 17px;
 }
 .more:hover,
 .more:focus {
@@ -853,7 +887,7 @@ section.main-banner::before {
     font-weight: bold;
     background-color: var(--brown-bg-header-form);
     margin-left: 6px;
-    padding: 7px 18px;
+    padding: 4px 17px;
 }
 .book:hover,
 .book:focus {
@@ -885,8 +919,14 @@ section.main-banner::before {
     line-height: 26px;
     color: var(--basic-black);
     font-weight: bold;
+    margin: 0 0 0 75px;
 }
-
+.hashtag {
+    margin: 0;
+}
+.phone-number {
+    margin: 0;
+}
 .footer-contacts a {
     color: var(--basic-black);
 }
@@ -936,10 +976,13 @@ a.copyright-button:active path {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: 80px;
 }
 .copyright-text {
-    margin-right: 8px;
-    margin-top: 10px;
+    margin-top: 14px;
+    margin-right: 3px
+    font-size: 14px;
+    line-height: 26px;
 }
 /* Additional */
 .visually-hidden {
