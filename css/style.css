@@ -24,6 +24,8 @@
     --range-controls-gray: rgba(255, 255, 255, 0.3);
     --gray-hover-form: #EBEBEB;
 
+    --black-low-opacity: rgba(0, 0, 0, 0.3);
+    --blown-low-opacity: rgba(80, 62, 51, 0.3);
     
     --bg-footer: rgba(255, 255, 255, 0.6);
 
@@ -117,8 +119,7 @@ img {
     color: var(--blue-form-button);
 }
 .site-nav a:active {
-    color: var(--basic-black);
-    opacity: 0.3;
+    color: var(--black-low-opacity);
 }
 .nav-active a {
     color: var(--brown-bg-header-form);
@@ -502,8 +503,10 @@ section.main-banner::before {
 }
 .hotel-search-header:active {
   background-color: var(--brown-button-clicked);
-  opacity: 0.3;
 }
+.hotel-search-header a:active {
+    opacity: 0.3;
+  }
 .map-index {
     position: relative;
 }
@@ -526,7 +529,10 @@ section.main-banner::before {
 .plus-minus-wrapper {
     display: flex;
     height: 42px;
-    margin-left: 10px;
+    margin-left: 14px;
+}
+.wrapper-kids {
+    margin: 0;
 }
 .form-item-kids label {
     margin-left: 49px;
@@ -555,7 +561,7 @@ section.main-banner::before {
 /* Forms and filters*/
 .filter {
     display: flex;
-    padding: 19px 71px;
+    padding: 25px 71px 15px 71px;
     background-image: url("../img/background-filter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -571,6 +577,8 @@ section.main-banner::before {
     text-transform: uppercase;
     font-weight: bold;
     color: var(--bg-white);
+    padding: 0;
+    margin: 0;
 }
 .filter ul {
     list-style: none;
@@ -580,7 +588,7 @@ section.main-banner::before {
     padding: 0;
   }
 .filter-option {
-      padding-top: 21px;
+    margin: 25px 0 19px 0;
   }
 .filter-option label {
     position: relative;
@@ -610,7 +618,7 @@ section.main-banner::before {
   color: var(--gray-checkbox);
 }
 .accomodation {
-    margin-left: 110px;
+    margin-left: 115px;
 } 
 .filter-item {
     margin-left: auto;
@@ -638,10 +646,10 @@ section.main-banner::before {
     margin-top: 10px;
   }
   .range-controls .bar {
-    width: 248px;
+    width: 250px;
     height: 2px;
     background: var(--bg-white);
-    margin-top: 23px;
+    margin-top: 20px;
   }
   .range-controls .toggle {
     width: 19px;
@@ -669,7 +677,7 @@ section.main-banner::before {
       left: -1px;
   }
   .range-controls .toggle-max {
-    left: 248px;
+    left: 250px;
 }
   .price-controls {
       display: flex;
@@ -679,7 +687,7 @@ section.main-banner::before {
       width: 100%;
       justify-content: center;  
       align-items: center;
-      margin-top: 15px;
+      margin-top: 12px;
   }
   .price-controls label {
     line-height: 21px;
@@ -689,7 +697,7 @@ section.main-banner::before {
     color: var(--bg-white);
     display: flex;
     align-items: center;
-    margin-left: 55px;
+    margin-left: 60px;
     position: relative;
   }
   .price-controls input {
@@ -708,8 +716,8 @@ section.main-banner::before {
     width: 2px;
     height: 22px;
     position: absolute;
-    right: 20%;
-    top: 128px;
+    right: 19%;
+    top: 122px;
   }
   .show-button {
     border: 2px solid var(--bg-white);
@@ -721,7 +729,7 @@ section.main-banner::before {
     width: 137px;
     height: 36px;
     background: transparent;
-    margin: 35px 94px 3px auto;
+    margin: 33px 94px 3px auto;
   }
   .show-button:hover {
       background-color: var(--bg-white);
@@ -818,9 +826,8 @@ section.main-banner::before {
     column-gap: 32px;
     align-items: center;
     min-height: 133px;
-    padding: 30px 70px;
     position: relative;
-    padding: 20px 70px;
+    padding: 19px 70px 15px 73px;
 }
 .hotel-list-grid::before {
     content: "";
@@ -842,6 +849,7 @@ section.main-banner::before {
 }
 .search-result {
     margin-bottom: 30;
+    margin-left: -2px;
     align-self: flex-start;
 }
 .hotel-name a {
@@ -852,16 +860,14 @@ section.main-banner::before {
     color: var(--light-blue);
 }
 .hotel-name a:active {
-    color: var(--basic-black);
-    opacity: 0.3;
+    color: var(--black-low-opacity);
 }
 .hotel-name {
     font-size: 21px;
     line-height: 26px;
     color: var(--basic-black);
     font-weight: bold;
-    margin-top: 4px;
-    margin-bottom: 0;
+    margin: 6px 0 0 0;
     width: 50%;
 }
 .price {
@@ -885,9 +891,9 @@ section.main-banner::before {
     font-weight: normal;
     background-color: var(--bg-light-gray);
     text-align: center;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 47px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 46px;
     width: 110px;
     align-self: flex-end;
 }
@@ -895,12 +901,13 @@ section.main-banner::before {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-   
+    align-self: flex-start;
 }
 .raiting-stars {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-top: 10px;
 }
 .star {
     background-image: url("../img/star.svg");
