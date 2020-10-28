@@ -1,5 +1,4 @@
 /*Variables*/
-
 :root {
     --bg-white: #FFFFFF;
     --basic-black: #000000;
@@ -24,8 +23,9 @@
     --range-controls-gray: rgba(255, 255, 255, 0.3);
     --gray-hover-form: #EBEBEB;
 
+    --white-low-opacity: rgba(255, 255, 255, 0.3);
     --black-low-opacity: rgba(0, 0, 0, 0.3);
-    --blown-low-opacity: rgba(80, 62, 51, 0.3);
+    --brown-low-opacity: rgba(80, 62, 51, 0.3);
     
     --bg-footer: rgba(255, 255, 255, 0.6);
 
@@ -81,7 +81,7 @@ img {
     transform: translateX(-50%);
     z-index: 10;
 }
-/*Main navigation */
+/* Main navigation */
 .main-nav {
     position: relative;
     font-size: 14px;
@@ -125,7 +125,7 @@ img {
     color: var(--brown-bg-header-form);
 }
 
-/* */
+/* Intro */
 .text-intro {
     text-align: center;
     font-size: 21px;
@@ -249,7 +249,6 @@ section.main-banner::before {
     top: 59px;
     left: 562px;
 }
-
 .feature-icon-souvenirs::before {
     content: "";
     background-image: url("../img/icon-2.svg");
@@ -363,7 +362,10 @@ section.main-banner::before {
     margin-top: 58px;
 }
 /* Reservation and Search Form */
-
+.map-index img {
+    width: 100%;
+    height: auto;
+}
 .reservation-header {
     font-size: 30px;
     line-height: 24px;
@@ -502,11 +504,11 @@ section.main-banner::before {
     background-color: var(--brown-button-focus);
 }
 .hotel-search-header:active {
-  background-color: var(--brown-button-clicked);
+    background-color: var(--brown-button-clicked);
 }
-.hotel-search-header a:active {
-    opacity: 0.3;
-  }
+a.hotel-search-header:active {
+    color: var(--white-low-opacity);
+}
 .map-index {
     position: relative;
 }
@@ -553,10 +555,13 @@ section.main-banner::before {
 .search-button:hover,
 .search-button:focus {
     background-color: var(--blue-form-button-focus);
+
+}
+button.search-button:active {
+    color: var(--white-low-opacity);
 }
 .search-button:active {
-    background-color: var(--blue-form-button-clicked);
-    opacity: 0.3;
+    color: var(--blue-form-button-clicked);
 }
 /* Forms and filters*/
 .filter {
@@ -586,17 +591,17 @@ section.main-banner::before {
     font-size: 14px;
     color: var(--bg-white);
     padding: 0;
-  }
+}
 .filter-option {
     margin: 25px 0 19px 0;
-  }
+}
 .filter-option label {
     position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
     padding-left: 40px;
-  }
+}
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
@@ -605,7 +610,7 @@ section.main-banner::before {
     background-image: url("../img/checkbox-off.png");
     border-radius: 2px;
     left: 0px;
-  }
+}
 .filter-input-checkbox:checked + label::after {
     content: "";
     position: absolute;
@@ -622,7 +627,7 @@ section.main-banner::before {
 } 
 .filter-item {
     margin-left: auto;
-  }
+}
 .filter-item legend {
     font-size: 16px;
     line-height: 21px;
@@ -638,19 +643,19 @@ section.main-banner::before {
 }
 .range-controls {
     position: relative;
-  }
+}
 .range-controls .scale {
     width: 316px;
     height: 2px;
     background: var(--range-controls-gray);
     margin-top: 10px;
-  }
+}
   .range-controls .bar {
     width: 250px;
     height: 2px;
     background: var(--bg-white);
     margin-top: 20px;
-  }
+}
   .range-controls .toggle {
     width: 19px;
     height: 21px;
@@ -662,7 +667,7 @@ section.main-banner::before {
     position: absolute;
     cursor: pointer;
     top: 50%;
-  }
+}
   .range-controls .toggle:hover,
   .range-controls .toggle:focus {
     width: 23px;
@@ -672,10 +677,10 @@ section.main-banner::before {
     background-color: var(--light-gray-raiting-bg);
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 var(--light-gray-shadow);
-  }
+}
   .range-controls .toggle-min {
       left: -1px;
-  }
+}
   .range-controls .toggle-max {
     left: 250px;
 }
@@ -688,7 +693,7 @@ section.main-banner::before {
       justify-content: center;  
       align-items: center;
       margin-top: 12px;
-  }
+}
   .price-controls label {
     line-height: 21px;
     font-size: 14px;
@@ -699,7 +704,7 @@ section.main-banner::before {
     align-items: center;
     margin-left: 60px;
     position: relative;
-  }
+}
   .price-controls input {
     display: flex;
     font-family: inherit;
@@ -709,7 +714,7 @@ section.main-banner::before {
     color: var(--bg-white);
     align-items: center;
     width: 50%;
-  }
+}
   .price-controls::after {
     content: "";
     background: var(--bg-white);
@@ -718,7 +723,7 @@ section.main-banner::before {
     position: absolute;
     right: 19%;
     top: 122px;
-  }
+}
   .show-button {
     border: 2px solid var(--bg-white);
     border-radius: 2px;
@@ -730,11 +735,11 @@ section.main-banner::before {
     height: 36px;
     background: transparent;
     margin: 33px 94px 3px auto;
-  }
+}
   .show-button:hover {
       background-color: var(--bg-white);
       color: var(--basic-black);
-  }
+}
 /* Catalog */
 .catalog-section {
     margin: 0;
@@ -787,14 +792,13 @@ section.main-banner::before {
 .sorted-by a {
     color: var(--basic-black);
 }
-.sorted-by a:hover {
-    color: var(--blue-form-button);
-}
+.sorted-by a:hover,
 .sorted-by a:focus {
-    color: var(--basic-black);
+    color: var(--blue-form-button);
 }
 .sorted-by a:active {
-    color: var(--blue-form-button);
+    color: var(--basic-black);
+    border: none;
 }
 .up-and-down {
     display: flex;
@@ -814,6 +818,12 @@ section.main-banner::before {
 .down:hover path,
 .down:focus path {
     fill: var(--basic-black);
+}
+.up:active path {
+    fill: var(--blue-form-button);
+}
+.down:active path {
+    fill: var(--blue-form-button);
 }
 .hotel-list {
     list-style: none;
@@ -915,7 +925,6 @@ section.main-banner::before {
     height: 17px;
     margin-left: 5px;
 }
-
 /* Hotel list buttons */
 .more-book-buttons {
     display: flex;
@@ -936,7 +945,9 @@ section.main-banner::before {
 }
 .more:active {
     background-color: var(--blue-form-button-clicked);
-    opacity: 0.3;
+}
+a.more:active {
+    color: var(--white-low-opacity);
 }
 .book {
     font-size: 14px;
@@ -953,7 +964,9 @@ section.main-banner::before {
 }
 .book:active {
     background-color: var(--brown-button-clicked);
-    opacity: 0.3;
+}
+a.book:active {
+    color: var(--white-low-opacity);
 }
 /* Footer */
 .page-footer {
@@ -988,7 +1001,6 @@ section.main-banner::before {
 .footer-contacts a {
     color: var(--basic-black);
 }
-
 /* Social buttons */
 .social {
     display: flex;
@@ -1010,8 +1022,10 @@ a.social-button:focus {
     background-color: var(--blue-form-button-focus);
 }
 a.social-button:active {
-    background-color: var(--blue-form-button-focus);
-    opacity: 0.3;
+    background-color: var(--blue-form-button-clicked);
+}
+a.social-button:active path{
+    fill: var(--white-low-opacity);
 }
 .social-icon a {
     margin-left: 6px;
@@ -1022,7 +1036,6 @@ a.social-button:active {
 /* Copyright */
 .copyright-button {
     margin-left: 5px;
-
 }
 a.copyright-button:hover path,
 a.copyright-button:focus path {
@@ -1055,7 +1068,7 @@ a.copyright-button:active path {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
   /* Java Script Classes */
   .search-show {
     display: none;
