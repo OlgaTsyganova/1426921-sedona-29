@@ -8,11 +8,3 @@ searchButton.addEventListener ("click", function (evt) {
     popup.classList.toggle("search-show");
    
 });
-
-
-/*
-searchForm.addEventListener("submit", function (evt) {
-    if (!formCheckIn.value || !formCheckOut.value) {
-      evt.preventDefault();
-    }
-  }); */

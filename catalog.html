@@ -5,14 +5,14 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&;display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page-body">
     <div class="main-wrapper">
         <header class="main-header">
             <nav class="main-nav">
                 <a href="index.html" class="main-header-logo">
-                    <img src="img/logos.svg" alt="Логотип городка Седона">
+                    <img src="img/logos.svg" alt="Логотип городка Седона" width="138" height="70">
                 </a>
                 <ul class="site-nav">
                     <li class="nav-left"><a href="blank.html">Информация</a></li>
@@ -63,17 +63,17 @@
                 <legend>стоимость в сутки (р):</legend>
                 <div class="range-filter">
                     <div class="price-controls">
-                        <label class="min-price">от</label>
-                        <input type="number" name="min-price" value="0">
-                        <label class="max-price">до</label>
-                        <input type="number" name="max-price" value="3000">
+                        <label for="price-from" class="min-price">от</label>
+                        <input type="number" name="min-price" id="price-from" value="0">
+                        <label for="price-till" class="max-price">до</label>
+                        <input type="number" name="max-price" id="price-till" value="3000">
                     </div>
                     <div class="range-controls">
                         <div class="scale">
                             <div class="bar"></div>
                         </div>
-                        <div class="toggle toggle-min" tabindex="0"></div>
-                        <div class="toggle toggle-max" tabindex="0"></div>
+                        <div class="toggle toggle-min" tabindex="0" aria-label="Минимальная цена"></div>
+                        <div class="toggle toggle-max" tabindex="0" aria-label="Максимальная цена"></div>
                     </div>
                     <button type="submit" class="show-button">Показать</button>
                 </div>

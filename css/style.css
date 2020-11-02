@@ -22,6 +22,7 @@
     --gray-divider: #E5E5E5;
     --range-controls-gray: rgba(255, 255, 255, 0.3);
     --gray-hover-form: #EBEBEB;
+    --light-blue-bg-banner: #d7ebf2;
 
     --white-low-opacity: rgba(255, 255, 255, 0.3);
     --black-low-opacity: rgba(0, 0, 0, 0.3);
@@ -146,7 +147,8 @@ img {
 }
 /* Welcome banner */
 .main-banner {
-    background: url("../img/background.jpg") no-repeat;
+    background: var(--light-blue-bg-banner) no-repeat;
+    background-image: url("../img/background.jpg");
     width: 100%;
     height: 509px;
     position: relative;
@@ -231,7 +233,7 @@ section.main-banner::before {
 }
 .feature-icon-home::before {
     content: "";
-    background-image: url("../img/icon-1.svg");
+    background-image: url("../img/iconhome.svg");
     display: block;
     width: 75px;
     height: 72px;
@@ -241,7 +243,7 @@ section.main-banner::before {
 }
 .feature-icon-food::before {
     content: "";
-    background-image: url("../img/icon-3.svg");
+    background-image: url("../img/iconfood.svg");
     display: block;
     width: 75px;
     height: 70px;
@@ -251,7 +253,7 @@ section.main-banner::before {
 }
 .feature-icon-souvenirs::before {
     content: "";
-    background-image: url("../img/icon-2.svg");
+    background-image: url("../img/icongift.svg");
     display: block;
     width: 64px;
     height: 77px;
@@ -619,8 +621,11 @@ button.search-button:active {
     height: 23px;
     left: 0px;
 }
+.filter-input-checkbox:hover {
+    color: var(--bg-white);
+  }
 .filter-input-checkbox:disabled {
-  color: var(--gray-checkbox);
+    color: var(--gray-checkbox);
 }
 .accomodation {
     margin-left: 115px;
